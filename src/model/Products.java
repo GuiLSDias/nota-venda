@@ -2,20 +2,31 @@ package model;
 
 import java.io.Serializable;
 
-public class Products implements Notice{
+public class Products{
     private double price;
     private int quantity;
     private String name;
 
 
-    public Products(double price, int quantity, String name) {
+    public Products(String name,double price, int quantity) {
         this.price = price;
         this.quantity = quantity;
         this.name = name;
     }
 
-    @Override
-    public Double totalPrice() {
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getTotalPrice(){
         return price * quantity;
     }
 }

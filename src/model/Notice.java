@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 public interface Notice {
-    Double totalPrice();
+    double totalPrice(List<InvoiceItem> items);
 }
